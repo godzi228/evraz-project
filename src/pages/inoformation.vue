@@ -7,6 +7,10 @@
   <q-card class="my-card">
     <q-card-section>
       <q-img class="image" src="https://avatars.mds.yandex.net/i?id=2a000001962a894f0d0bfcd20e27ac68496a-1614014-fast-images&n=13"></q-img>
+      <q-img class="image3" src="https://sun9-29.userapi.com/s/v1/ig2/jR0TieOaHjnQ-Vstw6psyVlF-vL4kxZR3nKZv3-zegtmwQ7_HUIO462wggJ_-4m6BfD0N3JxYxCU_b9LMmQ4LXkJ.jpg?size=400x400&quality=96&crop=120,54,960,960&ava=1"></q-img>
+      <q-img class="image4" src="https://static.tildacdn.com/tild6137-6234-4630-b935-383532613533/grocery-store.png"></q-img>
+      <div class="login">Павел</div>
+      <div class="basket">Корзина</div>
     </q-card-section>
   </q-card>
   </div>
@@ -75,4 +79,24 @@
 .football
   margin-left: 400px
   margin-top: 10px
+
+.image3
+  margin-left: 1277px
+  margin-top: -20px
+  width: 2%
+
+.login
+  margin-left: 1422px
+  margin-top: -50px
+  font-weight: bold
+
+.image4
+  margin-left: 1514px
+  margin-top: -127px
+  width: 2%
+
+.basket
+  margin-left: 1507px
+  margin-top: -21px
+  font-weight: bold
 </style>
