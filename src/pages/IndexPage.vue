@@ -8,6 +8,8 @@
     </q-card-section>
 
     <q-input class="phNum" standout="bg-teal text-white" v-model="text" mask="+7 (###) ###-##-##" label="Номер телефона" />
+    <q-input class="phNum" standout="bg-teal text-white" v-model="text"  label="Пароль" />
+    <q-btn class="join" color="black" label="Войти" href="/#/information" />
 
   </q-card>
 </template>
@@ -33,4 +35,9 @@
   width: 67ch
   margin: 30px auto
   background: #80daeb
+
+.join
+  width: 66ch
+  height: 60px
+  margin-left: 36px
 </style>
