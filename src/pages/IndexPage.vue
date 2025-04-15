@@ -4,7 +4,7 @@
     style="background: #80daeb"
   >
     <q-card-section>
-      <div class="text-h6">Привет, я Миша</div>
+      <div class="text-h6">Вход</div>
     </q-card-section>
 
     <q-input class="phNum" standout="bg-teal text-white" v-model="text" mask="+7 (###) ###-##-##" label="Номер телефона" />
