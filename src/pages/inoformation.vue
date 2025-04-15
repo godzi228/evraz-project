@@ -13,8 +13,16 @@
   <div class="container">
   <q-card class="main-card">
     <q-card-section>
+      <div class="t-shirt1">
       <q-img class="image1" src="https://images-eu.ssl-images-amazon.com/images/I/4160rSZjMdL.jpg"></q-img>
-      <div class="">Футболка с хайзенбергом</div>
+      <div class="t-shirtprice">1 000 ₽</div>
+      <div class="t-shirt">Футболка с хайзенбергом</div>
+      </div>
+      <div class="football1">
+        <q-img class="image2" src="https://avatars.mds.yandex.net/get-mpic/4785755/2a0000018ae8028943489afac1c0808a6025/orig"></q-img>
+        <div class="footballprice">35 000 ₽</div>
+        <div class="football">Футбольный мячик</div>
+      </div>
     </q-card-section>
   </q-card>
   </div>
@@ -24,9 +32,11 @@
 .container1
   display: flex
   justify-content: center
+
 .my-card
   height: 100px
   width: 88%
+
 .image
   width: 9%
 
@@ -41,4 +51,28 @@
 
 .image1
   width: 18%
+
+.image2
+  width: 18%
+
+.t-shirt
+  margin-top: 10px
+
+.t-shirtprice
+  font-size: 24px
+  font-weight: bold
+
+.image2
+ margin-top: -450px
+ margin-left: 400px
+
+.footballprice
+  font-size: 24px
+  font-weight: bold
+  margin-top: -89px
+  margin-left: 400px
+
+.football
+  margin-left: 400px
+  margin-top: 10px
 </style>
