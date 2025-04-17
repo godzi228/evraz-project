@@ -32,6 +32,11 @@
         <div class="phoneprice">100 500 ₽</div>
         <div class="phone">Телефон</div>
       </div>
+      <div class="container2">
+        <q-card class="shopinf" style="background: black">    <q-card-section>
+          <footer class="info" style="color: white">© 2025 Железная логика. Все права защищены. ОГРН 1196658005851</footer>    </q-card-section>
+        </q-card>
+      </div>
     </q-card-section>
   </q-card>
   </div>
@@ -119,4 +124,14 @@
 .phone
   margin-left: 750px
   margin-top: 10px
+
+.shopinf
+  margin-top: 270px
+  height: 100px
+
+.info
+  margin-top: 1%
+  margin-left: 10%
+  font-size: 20px
+
 </style>
