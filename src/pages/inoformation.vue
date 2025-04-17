@@ -6,7 +6,7 @@
   <div class="container1">
   <q-card class="my-card">
     <q-card-section>
-      <q-img class="image" src="https://avatars.mds.yandex.net/i?id=2a000001962a894f0d0bfcd20e27ac68496a-1614014-fast-images&n=13"></q-img>
+      <q-img class="image" src="https://avatars.mds.yandex.net/i?id=d8e3bb911c948ede43e0b259fa4ba5e2811516ff-12473946-images-thumbs&n=13"></q-img>
       <q-img class="image3" src="https://sun9-29.userapi.com/s/v1/ig2/jR0TieOaHjnQ-Vstw6psyVlF-vL4kxZR3nKZv3-zegtmwQ7_HUIO462wggJ_-4m6BfD0N3JxYxCU_b9LMmQ4LXkJ.jpg?size=400x400&quality=96&crop=120,54,960,960&ava=1"></q-img>
       <q-img class="image4" src="https://static.tildacdn.com/tild6137-6234-4630-b935-383532613533/grocery-store.png"></q-img>
       <div class="login">Павел</div>
@@ -27,6 +27,11 @@
         <div class="footballprice">35 000 ₽</div>
         <div class="football">Футбольный мячик</div>
       </div>
+      <div class="phone1">
+        <q-img class="image5" src="https://avatars.mds.yandex.net/i?id=8369d3b957210aaa4dede68e88780bcdc5a96adb-5876277-images-thumbs&n=13"></q-img>
+        <div class="phoneprice">100 500 ₽</div>
+        <div class="phone">Телефон</div>
+      </div>
     </q-card-section>
   </q-card>
   </div>
@@ -42,7 +47,7 @@
   width: 88%
 
 .image
-  width: 9%
+  width: 5%
 
 .container
   display: flex
@@ -81,7 +86,7 @@
   margin-top: 10px
 
 .image3
-  margin-left: 1277px
+  margin-left: 1345px
   margin-top: -20px
   width: 2%
 
@@ -99,4 +104,19 @@
   margin-left: 1507px
   margin-top: -21px
   font-weight: bold
+
+.image5
+  margin-left: 750px
+  margin-top: -450px
+  width: 18%
+
+.phoneprice
+  font-size: 24px
+  font-weight: bold
+  margin-top: -89px
+  margin-left: 750px
+
+.phone
+  margin-left: 750px
+  margin-top: 10px
 </style>
