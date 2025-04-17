@@ -18,7 +18,7 @@
   <q-card class="main-card">
     <q-card-section>
       <div class="t-shirt1">
-      <q-img class="image1" src="https://images-eu.ssl-images-amazon.com/images/I/4160rSZjMdL.jpg"></q-img>
+      <q-img class="image1" src="https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg"></q-img>
       <div class="t-shirtprice">1 000 ₽</div>
       <div class="t-shirt">Футболка с хайзенбергом</div>
       </div>

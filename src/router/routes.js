@@ -7,13 +7,19 @@ const routes = [
     ]
   },
 
-  {path: '/information',
+  {path: '/inoformation',
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/inoformation.vue') }
     ]
   },
 
+  {path: '/information',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/information.vue') }
+    ]
+  },
   // Always leave this as last one,
   // but you can also remove it
   {
