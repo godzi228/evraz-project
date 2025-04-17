@@ -128,6 +128,7 @@
 .shopinf
   margin-top: 270px
   height: 100px
+  width: 100%
 
 .info
   margin-top: 1%
