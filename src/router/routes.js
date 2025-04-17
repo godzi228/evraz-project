@@ -13,7 +13,18 @@ const routes = [
       { path: '', component: () => import('pages/inoformation.vue') }
     ]
   },
-
+  {path: '/inoformation/t-shirt',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/information.vue') }
+    ]
+  },
+  {path: '/inoformation/ball',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/ball.vue') }
+    ]
+  },
   {path: '/information',
     component: () => import('layouts/MainLayout.vue'),
     children: [
