@@ -1,5 +1,7 @@
 <script setup>
+import { ref } from 'vue'
 
+let ball = ref('https://avatars.mds.yandex.net/get-mpic/5283489/2a0000018f9b7564f71f44452811e1ac565a/180x240')
 </script>
 
 <template>
@@ -18,9 +20,9 @@
     <q-card class="main-card">
       <q-card-section>
         <div class="football1">
-          <q-img class="image2"  src="https://avatars.mds.yandex.net/get-mpic/5283489/2a0000018f9b7564f71f44452811e1ac565a/180x240"></q-img>
-          <q-img class="image5" src="https://avatars.mds.yandex.net/get-mpic/5057162/2a0000018f9b7564edd30b27397aa8dfb23a/180x240"></q-img>
-          <q-img class="image6"  src="https://avatars.mds.yandex.net/get-mpic/5283489/2a0000018f9b7564f71f44452811e1ac565a/180x240"></q-img>
+          <q-img class="image2"  :src="ball"></q-img>
+          <q-img class="image5" @click="ball = 'https://avatars.mds.yandex.net/get-mpic/5057162/2a0000018f9b7564edd30b27397aa8dfb23a/180x240'"  src="https://avatars.mds.yandex.net/get-mpic/5057162/2a0000018f9b7564edd30b27397aa8dfb23a/180x240"></q-img>
+          <q-img class="image6"  @click="ball = 'https://avatars.mds.yandex.net/get-mpic/5283489/2a0000018f9b7564f71f44452811e1ac565a/180x240 ' "  src="https://avatars.mds.yandex.net/get-mpic/5283489/2a0000018f9b7564f71f44452811e1ac565a/180x240"></q-img>
           <div class="football">Футбольный мячик</div>
           <div class="opis">Мяч футбольный Demix</div>
           <div class="footballprice">35 000 ₽</div>

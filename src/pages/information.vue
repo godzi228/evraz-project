@@ -1,5 +1,7 @@
 <script setup>
+import { ref } from 'vue'
 
+let tshirt = ref('https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg')
 </script>
 
 <template>
@@ -18,10 +20,10 @@
   <div class="container">
     <q-card class="main-card">
       <q-card-section>
-        <q-img class="image5" src="https://ir-8.ozone.ru/s3/multimedia-1-5/wc1000/7197436049.jpg"></q-img>
-        <q-img class="image2" src="https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg"></q-img>
+        <q-img class="image5" src="https://ir-8.ozone.ru/s3/multimedia-1-5/wc1000/7197436049.jpg" @click="tshirt = 'https://ir-8.ozone.ru/s3/multimedia-1-5/wc1000/7197436049.jpg'"></q-img>
+        <q-img class="image2" src="https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg" @click="tshirt = 'https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg'"></q-img>
         <div class="t-shirt1">
-          <q-img class="image1" src="https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg"></q-img>
+          <q-img class="image1" :src="tshirt"></q-img>
         </div>
         <div class="t-shirtheis">
           Футболка с Хайзенбергом
