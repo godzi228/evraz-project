@@ -55,7 +55,7 @@
   border-radius: 30px
 
 .image
-  margin-top: -10px
+  margin-top: -7px
   width: 5%
 
 .basket
@@ -75,7 +75,7 @@
 
 .image4
   margin-left: 1514px
-  margin-top: -110px
+  margin-top: -115px
   width: 2%
 
 .shopinf
@@ -101,6 +101,7 @@
   width: 20%
   margin-top: -180px
   margin-left: 140px
+  border-radius: 15px
 
 .t-shirtheis
   margin-left: 600px
@@ -129,9 +130,11 @@
   width: 4%
   margin-top: -100px
   margin-left: -65px
+  border-radius: 15px
 
 .image5
   width: 4%
   margin-left: 10px
   margin-top: 110px
+  border-radius: 15px
 </style>

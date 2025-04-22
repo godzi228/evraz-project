@@ -51,8 +51,9 @@
   border-radius: 30px
 
 .image
-  margin-top: -10px
+  margin-top: -7px
   width: 5%
+  border-radius: 15px
 
 .container
   display: flex
@@ -66,10 +67,12 @@
 
 .image1
   width: 18%
+  border-radius: 15px
 
 .image2
   width: 22%
   margin-left: 150px
+  border-radius: 15px
 
 .t-shirt
   margin-top: 10px
@@ -107,7 +110,7 @@
 
 .image4
   margin-left: 1514px
-  margin-top: -110px
+  margin-top: -115px
   width: 2%
 
 .basket
@@ -150,9 +153,11 @@
   width: 5%
   margin-left: -500px
   margin-top: -50px
+  border-radius: 15px
+
 .image6
   width: 5%
   margin-left: -82px
   margin-top: -300px
-
+  border-radius: 15px
 </style>

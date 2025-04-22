@@ -55,8 +55,9 @@
   border-radius: 30px
 
 .image
-  margin-top: -10px
+  margin-top: -7px
   width: 5%
+  border-radius: 15px
 
 .container
   display: flex
@@ -70,9 +71,11 @@
 
 .image1
   width: 14%
+  border-radius: 15px
 
 .image2
   width: 13%
+  border-radius: 15px
 
 .t-shirt
   margin-top: 10px
@@ -107,7 +110,7 @@
 
 .image4
   margin-left: 1514px
-  margin-top: -110px
+  margin-top: -115px
   width: 2%
 
 .basket
@@ -119,6 +122,7 @@
   margin-left: 750px
   margin-top: -450px
   width: 14%
+  border-radius: 15px
 
 .phoneprice
   font-size: 24px
