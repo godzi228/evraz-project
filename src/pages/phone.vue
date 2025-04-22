@@ -1,5 +1,7 @@
 <script setup>
+import { ref } from 'vue'
 
+let phone = ref('https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/171042725/images/c246x328/1.webp')
 </script>
 
 <template>
@@ -18,9 +20,9 @@
     <q-card class="main-card">
       <q-card-section>
         <div class="football1">
-          <q-img class="image2"  src="https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/171042725/images/c246x328/1.webp"></q-img>
-          <q-img class="image5" src="https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/171042725/images/c246x328/2.webp"></q-img>
-          <q-img class="image6"  src="https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/171042725/images/c246x328/1.webp"></q-img>
+          <q-img class="image2"  :src="phone"></q-img>
+          <q-img class="image5" src="https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/171042725/images/c246x328/2.webp" @click="phone = 'https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/171042725/images/c246x328/2.webp'"></q-img>
+          <q-img class="image6"  src="https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/171042725/images/c246x328/1.webp" @click="phone = 'https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/171042725/images/c246x328/1.webp'"></q-img>
           <div class="football">Смартфон iPhone 14 Pro 256 ГБ Dual SIM тёмно-фиолетовый</div>
           <div class="opis">Телефон iPhone 14 Pro 256 ГБ с батареей, которая обеспечит до 23 часов беспрерывного просмотра видео.</div>
           <div class="footballprice">35 000 ₽</div>
