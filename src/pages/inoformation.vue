@@ -28,7 +28,7 @@
         <div class="football">Футбольный мячик</div>
       </div>
       <div class="phone1">
-        <q-img class="image5" src="https://avatars.mds.yandex.net/i?id=8369d3b957210aaa4dede68e88780bcdc5a96adb-5876277-images-thumbs&n=13"></q-img>
+        <q-img class="image5" src="https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/171042725/images/c246x328/1.webp"></q-img>
         <div class="phoneprice">100 500 ₽</div>
         <div class="phone">Телефон</div>
       </div>
@@ -117,7 +117,7 @@
 .image5
   margin-left: 750px
   margin-top: -450px
-  width: 18%
+  width: 14%
 
 .phoneprice
   font-size: 24px

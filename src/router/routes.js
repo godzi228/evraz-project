@@ -25,6 +25,12 @@ const routes = [
       { path: '', component: () => import('pages/ball.vue') }
     ]
   },
+  {path: '/information/phone',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/phone.vue') }
+    ]
+  },
   // Always leave this as last one,
   // but you can also remove it
   {
