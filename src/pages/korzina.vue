@@ -63,7 +63,9 @@
   border-radius: 30px
 
 .image
+  margin-top: -7px
   width: 5%
+  border-radius: 15px
 
 .image3
   margin-left: 1345px
@@ -72,7 +74,7 @@
 
 .image4
   margin-left: 1514px
-  margin-top: -127px
+  margin-top: -115px
   width: 2%
 
 .login
