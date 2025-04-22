@@ -6,9 +6,9 @@
   <div class="container1">
       <q-card class="my-card">
         <q-card-section>
-          <q-img class="image" src="https://avatars.mds.yandex.net/i?id=d8e3bb911c948ede43e0b259fa4ba5e2811516ff-12473946-images-thumbs&n=13"></q-img>
+          <router-link :to="{ path: '/information' }"><q-img class="image" src="https://avatars.mds.yandex.net/i?id=d8e3bb911c948ede43e0b259fa4ba5e2811516ff-12473946-images-thumbs&n=13"></q-img></router-link>
           <q-img class="image3" src="https://sun9-29.userapi.com/s/v1/ig2/jR0TieOaHjnQ-Vstw6psyVlF-vL4kxZR3nKZv3-zegtmwQ7_HUIO462wggJ_-4m6BfD0N3JxYxCU_b9LMmQ4LXkJ.jpg?size=400x400&quality=96&crop=120,54,960,960&ava=1"></q-img>
-          <q-img class="image4" src="https://static.tildacdn.com/tild6137-6234-4630-b935-383532613533/grocery-store.png"></q-img>
+          <router-link :to="{ path: '/information/korzina' }"><q-img class="image4" src="https://static.tildacdn.com/tild6137-6234-4630-b935-383532613533/grocery-store.png"></q-img></router-link>
           <div class="login">Павел</div>
           <div class="basket">Корзина</div>
         </q-card-section>
@@ -18,17 +18,17 @@
   <q-card class="main-card">
     <q-card-section>
       <div class="t-shirt1">
-      <q-img class="image1" src="https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg"></q-img>
+      <router-link :to="{ path: '/information/t-shirt' }"><q-img class="image1" src="https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg"></q-img></router-link>
       <div class="t-shirtprice">1 000 ₽</div>
       <div class="t-shirt">Футболка с хайзенбергом</div>
       </div>
       <div class="football1">
-        <q-img class="image2" src="https://avatars.mds.yandex.net/get-mpic/5283489/2a0000018f9b7564f71f44452811e1ac565a/180x240"></q-img>
+        <router-link :to="{ path: '/information/ball' }"><q-img class="image2" src="https://avatars.mds.yandex.net/get-mpic/5283489/2a0000018f9b7564f71f44452811e1ac565a/180x240"></q-img></router-link>
         <div class="footballprice">35 000 ₽</div>
         <div class="football">Футбольный мячик</div>
       </div>
       <div class="phone1">
-        <q-img class="image5" src="https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/171042725/images/c246x328/1.webp"></q-img>
+        <router-link :to="{ path: '/information/phone' }"><q-img class="image5" src="https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/171042725/images/c246x328/1.webp"></q-img></router-link>
         <div class="phoneprice">100 500 ₽</div>
         <div class="phone">Телефон</div>
       </div>
@@ -55,6 +55,7 @@
   border-radius: 30px
 
 .image
+  margin-top: -10px
   width: 5%
 
 .container
@@ -106,7 +107,7 @@
 
 .image4
   margin-left: 1514px
-  margin-top: -127px
+  margin-top: -110px
   width: 2%
 
 .basket
