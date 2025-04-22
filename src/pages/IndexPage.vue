@@ -17,7 +17,6 @@
 <script setup>
 
 
-items
 </script>
 
 <style lang="sass" scoped>
