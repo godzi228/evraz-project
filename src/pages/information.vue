@@ -27,7 +27,7 @@
           Футболка с Хайзенбергом
         </div>
         <div class="t-shirtHeisInf">
-          Футболка на которой нарисован Хайзенберг, отсылочка
+          Футболка на которой нарисован Хайзенберг
         </div>
         <div class="t-shirtprice">1 000 ₽</div>
         <q-btn class="join" color="black">Добавить в корзину</q-btn>
@@ -79,7 +79,7 @@
 
 .shopinf
   height: 100px
-  margin-top: 260px
+  margin-top: 160px
 
 .info
   font-size: 20px

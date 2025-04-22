@@ -31,6 +31,13 @@
       </q-card-section>
     </q-card>
   </div>
+  <div class="container2">
+    <q-card class="shopinf" style="background: black">
+      <q-card-section>
+        <footer class="info" style="color: white">© 2025 Железная логика. Все права защищены. ОГРН 1196658005851</footer>
+      </q-card-section>
+    </q-card>
+  </div>
 </template>
 
 <style scoped lang="sass">
@@ -124,7 +131,7 @@
 
 .shopinf
   height: 100px
-  margin-top: 260px
+  margin-top: 160px
 
 .info
   font-size: 20px

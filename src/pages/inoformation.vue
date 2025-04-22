@@ -18,12 +18,12 @@
   <q-card class="main-card">
     <q-card-section>
       <div class="t-shirt1">
-      <q-img class="image1" src="https://images-eu.ssl-images-amazon.com/images/I/4160rSZjMdL.jpg"></q-img>
+      <q-img class="image1" src="https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg"></q-img>
       <div class="t-shirtprice">1 000 ₽</div>
       <div class="t-shirt">Футболка с хайзенбергом</div>
       </div>
       <div class="football1">
-        <q-img class="image2" src="https://avatars.mds.yandex.net/get-mpic/4785755/2a0000018ae8028943489afac1c0808a6025/orig"></q-img>
+        <q-img class="image2" src="https://avatars.mds.yandex.net/get-mpic/5283489/2a0000018f9b7564f71f44452811e1ac565a/180x240"></q-img>
         <div class="footballprice">35 000 ₽</div>
         <div class="football">Футбольный мячик</div>
       </div>
@@ -68,10 +68,10 @@
   border-radius: 30px
 
 .image1
-  width: 18%
+  width: 14%
 
 .image2
-  width: 18%
+  width: 13%
 
 .t-shirt
   margin-top: 10px
@@ -81,7 +81,7 @@
   font-weight: bold
 
 .image2
- margin-top: -450px
+ margin-top: -470px
  margin-left: 400px
 
 .footballprice
