@@ -1,5 +1,26 @@
 <script setup>
-
+const products = [
+  {
+    path: '/information/t-shirt',
+    image: 'https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg',
+    price: '1 000 ',
+    name: 'Футболка с хайзенбергом',
+  },
+  {
+    path: '/information/ball',
+    image: 'https://avatars.mds.yandex.net/get-mpic/5283489/2a0000018f9b7564f71f44452811e1ac565a/180x240',
+    price: '35 000',
+    name: 'Футбольный мячик',
+  },
+  {
+    path: '/information/phone',
+    image: 'https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/171042725/images/c246x328/1.webp',
+    price: '100 500',
+    name: 'Телефон',
+  },
+]
+let productslenght = products.length
+console.log(productslenght)
 </script>
 
 <template>
@@ -15,24 +36,22 @@
       </q-card>
   </div>
   <div class="container">
-  <q-card class="main-card">
-    <q-card-section>
-      <div class="t-shirt1">
-      <router-link :to="{ path: '/information/t-shirt' }"><q-img class="image1" src="https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg"></q-img></router-link>
-      <div class="t-shirtprice">1 000 ₽</div>
-      <div class="t-shirt">Футболка с хайзенбергом</div>
-      </div>
-      <div class="football1">
-        <router-link :to="{ path: '/information/ball' }"><q-img class="image2" src="https://avatars.mds.yandex.net/get-mpic/5283489/2a0000018f9b7564f71f44452811e1ac565a/180x240"></q-img></router-link>
-        <div class="footballprice">35 000 ₽</div>
-        <div class="football">Футбольный мячик</div>
-      </div>
-      <div class="phone1">
-        <router-link :to="{ path: '/information/phone' }"><q-img class="image5" src="https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/171042725/images/c246x328/1.webp"></q-img></router-link>
-        <div class="phoneprice">100 500 ₽</div>
-        <div class="phone">Телефон</div>
-      </div>
-    </q-card-section>
+    <q-card class="main-card">
+      <q-card-section>
+        <div class="products">
+          <router-link
+            v-for="product in products"
+            :to="{ path: product.path }"
+            class="product"
+          >
+            <div class="product-image">
+              <q-img :src="product.image" />
+            </div>
+            <div class="product-price">{{ product.price }} ₽</div>
+            <div class="product-name">{{product.name}}</div>
+          </router-link>
+        </div>
+      </q-card-section>
   </q-card>
   </div>
   <div class="container2">
@@ -69,34 +88,6 @@
   margin-top: 100px
   border-radius: 30px
 
-.image1
-  width: 14%
-  border-radius: 15px
-
-.image2
-  width: 13%
-  border-radius: 15px
-
-.t-shirt
-  margin-top: 10px
-
-.t-shirtprice
-  font-size: 24px
-  font-weight: bold
-
-.image2
- margin-top: -470px
- margin-left: 400px
-
-.footballprice
-  font-size: 24px
-  font-weight: bold
-  margin-top: -89px
-  margin-left: 400px
-
-.football
-  margin-left: 400px
-  margin-top: 10px
 
 .image3
   margin-left: 1345px
@@ -124,16 +115,6 @@
   width: 14%
   border-radius: 15px
 
-.phoneprice
-  font-size: 24px
-  font-weight: bold
-  margin-top: -89px
-  margin-left: 750px
-
-.phone
-  margin-left: 750px
-  margin-top: 10px
-
 .shopinf
   height: 100px
   margin-top: 260px
@@ -142,4 +123,46 @@
   font-size: 20px
   padding-left: 200px
   padding-top: 1%
+
+.products
+  display: grid
+  gap: 24px
+  align-items: stretch
+  grid-template-columns: repeat(5, 1fr)
+
+.product
+  display: flex
+  flex-direction: column
+  color: black
+  text-decoration: none
+
+.product-image
+  width: 100%
+  height: 0
+  padding-top: 100%
+  position: relative
+  border-radius: 12px
+  margin-bottom: 8px
+  overflow: hidden
+  flex-grow: 1
+
+.product-image .q-img
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+.product-price
+  font-size: 18px
+  font-weight: 700
+  letter-spacing: .4px
+  line-height: 24px
+
+.product-name
+  font-size: 14px
+  font-weight: 400
+  letter-spacing: .2px
+  line-height: 24px
+
 </style>
