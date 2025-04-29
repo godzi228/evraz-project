@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from 'vue'
+import { useCartStore } from 'src/stores/cart.js'
+
+const cartStore = useCartStore()
 
 let tshirt = ref('https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg')
 </script>
@@ -32,7 +35,11 @@ let tshirt = ref('https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg'
           Футболка на которой нарисован Хайзенберг
         </div>
         <div class="t-shirtprice">1 000 ₽</div>
-        <q-btn class="join" color="black">Добавить в корзину</q-btn>
+        <q-btn class="join" color="black" @click="cartStore.addCartItem({
+          image: tshirt,
+          name: 'Футболка с Хайзенбергом',
+          price: '1 000'
+        })">Добавить в корзину</q-btn>
       </q-card-section>
     </q-card>
   </div>

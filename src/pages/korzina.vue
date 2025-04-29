@@ -1,5 +1,8 @@
 <script setup>
 
+import { useCartStore } from "../stores/cart.js";
+
+const cartStore = useCartStore();
 </script>
 
 <template>
@@ -27,6 +30,7 @@
         <div class="korzink">Корзина</div>
         </div>
         <div>
+          {{ cartStore.cartItems }}
         <div class="Summ">Сумма заказа:</div>
         <q-btn class="join" color="black" label="Оформить заказ" />
         </div>
