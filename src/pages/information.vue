@@ -15,6 +15,7 @@ let hasInCart = computed(() => {
   return false
 })
 
+
 </script>
 
 <template>
@@ -46,8 +47,8 @@ let hasInCart = computed(() => {
         </div>
         <div class="t-shirtprice">1 000 ₽</div>
         <q-btn
-          :class="{'join-active': hasInCart = 'true', 'join': hasInCart = 'false'}"
-          color="black"
+          :class="{'join-active': hasInCart === 'true', 'join': hasInCart = 'false'}"
+
 
           @click="cartStore.addCartItem({
           image: tshirt,
@@ -148,6 +149,8 @@ let hasInCart = computed(() => {
   width: 230px
   height: 60px
   border-radius: 10px
+  background-color: black
+  color: white
 
 .join-active
   margin-left: 610px

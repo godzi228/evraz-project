@@ -4,8 +4,6 @@ import { useCartStore } from "../stores/cart.js";
 
 const cartStore = useCartStore();
 
-console.log(cartStore.cartItems)
-
 </script>
 
 <template>
@@ -33,7 +31,23 @@ console.log(cartStore.cartItems)
         <div class="korzink">Корзина</div>
         </div>
         <div>
-          {{ cartStore.cartItems }}
+          <div class='container2' v-for="cartItem in cartStore.cartItems">
+          <q-card>
+            <q-img class='tshirt' :src="cartItem.image"></q-img>
+           <div>
+             {{cartItem.name}}
+           </div>
+            <button class="minus">
+              <img class='minus' src="https://avatars.mds.yandex.net/get-entity_search/10843572/1133902588/SUx182_2x">
+            </button>
+            <div>1</div>
+            <button class="plus">
+              <img class='plus' src="https://avatars.mds.yandex.net/i?id=1fdb23cb557c261e07f43290aa3b6f7224bd50a1-6209931-images-thumbs&n=13">
+            </button>
+            <div>{{cartItem.price}} ₽</div>
+            <button class="delet"><img class="delet" src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3517303/trash-can-icon-md.png"></button>
+          </q-card>
+          </div>
         <div class="Summ">Сумма заказа:</div>
         <q-btn class="join" color="black" label="Оформить заказ" />
         </div>
@@ -51,6 +65,26 @@ console.log(cartStore.cartItems)
 </template>
 
 <style scoped lang="sass">
+
+
+.minus
+  width: 50px
+  border-style: none
+  color: white
+  background-color: white
+
+.plus
+  width: 50px
+  border-style: none
+  color: white
+  background-color: white
+
+.delet
+  width: 50px
+  border-style: none
+  color: white
+  background-color: white
+
 .shopinf
   height: 100px
   margin-top: 260px
@@ -134,4 +168,6 @@ console.log(cartStore.cartItems)
   font-weight: bold
   font-size: 22px
   margin-top: -34px
+.tshirt
+  width: 100px
 </style>

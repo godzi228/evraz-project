@@ -20,8 +20,6 @@ const products = [
     name: 'Телефон',
   },
 ]
-let productslenght = products.length
-console.log(products)
 </script>
 
 <template>
