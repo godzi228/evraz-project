@@ -1,10 +1,20 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useCartStore } from 'src/stores/cart.js'
 
 const cartStore = useCartStore()
 
 let tshirt = ref('https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg')
+
+let hasInCart = computed(() => {
+  for (let cartItem of cartStore.cartItems) {
+    if (cartItem.name === 'Футболка с Хайзенбергом') {
+      return true
+    }
+  }
+  return false
+})
+
 </script>
 
 <template>
@@ -35,10 +45,14 @@ let tshirt = ref('https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg'
           Футболка на которой нарисован Хайзенберг
         </div>
         <div class="t-shirtprice">1 000 ₽</div>
-        <q-btn class="join" color="black" @click="cartStore.addCartItem({
+        <q-btn
+          :class="{'join-active': hasInCart = 'true', 'join': hasInCart = 'false'}"
+          color="black"
+
+          @click="cartStore.addCartItem({
           image: tshirt,
           name: 'Футболка с Хайзенбергом',
-          price: '1 000'
+          price: '1 000',
         })">Добавить в корзину</q-btn>
       </q-card-section>
     </q-card>
@@ -134,6 +148,14 @@ let tshirt = ref('https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg'
   width: 230px
   height: 60px
   border-radius: 10px
+
+.join-active
+  margin-left: 610px
+  margin-top: 20px
+  width: 230px
+  height: 60px
+  border-radius: 10px
+  background-color: green
 
 .image2
   width: 4%

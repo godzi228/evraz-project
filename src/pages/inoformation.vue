@@ -21,7 +21,7 @@ const products = [
   },
 ]
 let productslenght = products.length
-console.log(productslenght)
+console.log(products)
 </script>
 
 <template>

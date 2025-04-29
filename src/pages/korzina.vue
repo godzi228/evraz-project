@@ -3,6 +3,9 @@
 import { useCartStore } from "../stores/cart.js";
 
 const cartStore = useCartStore();
+
+console.log(cartStore.cartItems)
+
 </script>
 
 <template>
