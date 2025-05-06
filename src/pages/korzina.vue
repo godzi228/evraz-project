@@ -1,10 +1,22 @@
 <script setup>
-
-import { useCartStore } from "../stores/cart.js";
+import { useCartStore} from "../stores/cart.js";
+import { ref, computed} from "vue";
 
 const cartStore = useCartStore();
 
+
+function deleteCartItemAll() {
+cartStore.cartItems.splice(cartStore.cartItems.length = '')
+}
+
+function deleteCartItem(index) {
+  for(let cartItem in cartStore.cartItems){
+    cartItem.name.splice(index, 1)
+  }
+
+}
 </script>
+
 
 <template>
   <header class="container1">
@@ -24,7 +36,7 @@ const cartStore = useCartStore();
       <q-card-section>
         <a class="delete">
         <q-img class="image6" src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3517303/trash-can-icon-md.png"></q-img>
-        <div class="deletAll">
+        <div class="deletAll" @click="deleteCartItemAll">
           Очистить всё
         </div>
         </a>
@@ -39,19 +51,19 @@ const cartStore = useCartStore();
            <div class="title">
              {{cartItem.name}}
            </div>
-            <button class="minusButton">
+            <button class="minusButton" @click="cartStore.decreaseCartItem(cartItem)">
               <img class='minus' src="https://avatars.mds.yandex.net/get-entity_search/10843572/1133902588/SUx182_2x">
             </button>
             <div class="kolvo">
-              1
+              {{ cartItem.quantity }}
             </div>
-            <button class="plusButton">
+            <button class="plusButton" @click="cartStore.increaseCartItem(cartItem)">
               <img class='plus' src="https://avatars.mds.yandex.net/i?id=1fdb23cb557c261e07f43290aa3b6f7224bd50a1-6209931-images-thumbs&n=13">
             </button>
             <div class="price">
               {{cartItem.price}} ₽
             </div>
-            <button class="delet">
+            <button class="delet" @click="deleteCartItem(index)">
               <img class="delet" src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3517303/trash-can-icon-md.png">
             </button>
           </q-card>
@@ -78,14 +90,17 @@ const cartStore = useCartStore();
 
 <style scoped lang="sass">
 
+.container4
+  display: flex
+  justify-content: space-between
 
 
 .delete
   cursor: pointer
 
 .price
-  font-size: 45px
-  padding-top: 30px
+  font-size: 24px
+  padding-top: 50px
   margin-left: 200px
 
 .kolvo
@@ -195,12 +210,8 @@ const cartStore = useCartStore();
 
 .Summ
   font-size: 30px
-  margin-left: 1050px
-  margin-top: 220px
 
 .accept
-  margin-left: 1400px
-  margin-top: -70px
   font-size: 17px
 
 .image5

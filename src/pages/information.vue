@@ -1,10 +1,15 @@
 <script setup>
 import { ref, computed } from 'vue'
-import { useCartStore } from 'src/stores/cart.js'
+import {useCartStore} from 'src/stores/cart.js'
 
 const cartStore = useCartStore()
 
 let tshirt = ref('https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg')
+
+let tshirt1 = ref('https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg')
+
+
+
 
 let hasInCart = computed(() => {
   for (let cartItem of cartStore.cartItems) {
@@ -14,7 +19,6 @@ let hasInCart = computed(() => {
   }
   return false
 })
-
 
 </script>
 
@@ -50,10 +54,12 @@ let hasInCart = computed(() => {
           :class="{'join-active': hasInCart === true, 'join': hasInCart === false}"
 
 
+
           @click="cartStore.addCartItem({
-          image: tshirt,
+          image: tshirt1,
           name: 'Футболка с Хайзенбергом',
           price: '1 000',
+
         })">Добавить в корзину</q-btn>
       </q-card-section>
     </q-card>

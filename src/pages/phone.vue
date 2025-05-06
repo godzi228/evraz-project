@@ -1,5 +1,22 @@
 <script setup>
-import { ref } from 'vue'
+
+import { ref, computed } from 'vue'
+import { useCartStore } from 'src/stores/cart.js'
+
+const cartStore = useCartStore()
+
+let phone1 = ref('https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/171042725/images/c246x328/1.webp')
+
+let hasInCart = computed(() => {
+  for (let cartItem of cartStore.cartItems) {
+    if (cartItem.name === 'Смартфон iPhone 14 Pro') {
+      return true
+    }
+  }
+  return false
+})
+
+
 
 let phone = ref('https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/171042725/images/c246x328/1.webp')
 </script>
@@ -25,10 +42,15 @@ let phone = ref('https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/17104
           <q-img class="image6"  src="https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/171042725/images/c246x328/1.webp" @click="phone = 'https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/171042725/images/c246x328/1.webp'"></q-img>
           <div class="football">Смартфон iPhone 14 Pro 256 ГБ Dual SIM тёмно-фиолетовый</div>
           <div class="opis">Телефон iPhone 14 Pro 256 ГБ с батареей, которая обеспечит до 23 часов беспрерывного просмотра видео.</div>
-          <div class="footballprice">35 000 ₽</div>
-          <q-btn color="black" class="join">
-            Добавить в корзину
-          </q-btn>
+          <div class="footballprice">100 500 ₽</div>
+          <q-btn
+            :class="{'join-active': hasInCart === true, 'join': hasInCart === false}"
+
+            @click="cartStore.addCartItem({
+          image: phone1,
+          name: 'Смартфон iPhone 14 Pro',
+          price: '100 500',
+        })">Добавить в корзину</q-btn>
         </div>
       </q-card-section>
     </q-card>
@@ -145,12 +167,21 @@ let phone = ref('https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/17104
   padding-top: 1%
 
 .join
-  width: 16%
-  height: 50px
-  margin-left: 550px
-  margin-top: 60px
+  margin-left: 610px
+  margin-top: 20px
+  width: 230px
+  height: 60px
   border-radius: 10px
+  background-color: black
+  color: white
 
+.join-active
+  margin-left: 610px
+  margin-top: 20px
+  width: 230px
+  height: 60px
+  border-radius: 10px
+  background-color: green
 .image5
   width: 5%
   margin-left: -500px

@@ -1,7 +1,23 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useCartStore } from 'src/stores/cart.js'
+
+const cartStore = useCartStore()
+
+
+let hasInCart = computed(() => {
+  for (let cartItem of cartStore.cartItems) {
+    if (cartItem.name === 'Мяч футбольный Demix') {
+      return true
+    }
+  }
+  return false
+})
+
 
 let ball = ref('https://avatars.mds.yandex.net/get-mpic/5283489/2a0000018f9b7564f71f44452811e1ac565a/180x240')
+
+let ball1 = ref('https://avatars.mds.yandex.net/get-mpic/5283489/2a0000018f9b7564f71f44452811e1ac565a/180x240')
 </script>
 
 <template>
@@ -26,9 +42,14 @@ let ball = ref('https://avatars.mds.yandex.net/get-mpic/5283489/2a0000018f9b7564
           <div class="football">Футбольный мячик</div>
           <div class="opis">Мяч футбольный Demix</div>
           <div class="footballprice">35 000 ₽</div>
-          <q-btn color="black" class="join">
-            Добавить в корзину
-          </q-btn>
+          <q-btn
+            :class="{'join-active': hasInCart === true, 'join': hasInCart === false}"
+
+            @click="cartStore.addCartItem({
+          image: ball1,
+          name: 'Мяч футбольный Demix',
+          price: '35 000',
+        })">Добавить в корзину</q-btn>
         </div>
       </q-card-section>
     </q-card>
@@ -145,11 +166,21 @@ let ball = ref('https://avatars.mds.yandex.net/get-mpic/5283489/2a0000018f9b7564
   padding-top: 1%
 
 .join
-  width: 16%
-  height: 50px
-  margin-left: 550px
-  margin-top: 60px
+  margin-left: 610px
+  margin-top: 20px
+  width: 230px
+  height: 60px
   border-radius: 10px
+  background-color: black
+  color: white
+
+.join-active
+  margin-left: 610px
+  margin-top: 20px
+  width: 230px
+  height: 60px
+  border-radius: 10px
+  background-color: green
 
 .image5
   width: 5%
