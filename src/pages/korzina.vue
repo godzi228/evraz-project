@@ -7,7 +7,7 @@ const cartStore = useCartStore();
 </script>
 
 <template>
-  <div class="container1">
+  <header class="container1">
     <q-card class="my-card">
       <q-card-section>
         <router-link :to="{ path: '/information' }"><q-img class="image" src="https://avatars.mds.yandex.net/i?id=d8e3bb911c948ede43e0b259fa4ba5e2811516ff-12473946-images-thumbs&n=13"></q-img></router-link>
@@ -17,45 +17,57 @@ const cartStore = useCartStore();
         <div class="basket">Корзина</div>
       </q-card-section>
     </q-card>
-  </div>
+  </header>
 
   <div class="container">
     <q-card class="main-card">
       <q-card-section>
-        <div>
+        <a class="delete">
         <q-img class="image6" src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3517303/trash-can-icon-md.png"></q-img>
-        <div class="deletAll">Очистить всё</div>
+        <div class="deletAll">
+          Очистить всё
         </div>
+        </a>
         <div>
         <q-img class="image5" src="https://static.tildacdn.com/tild6137-6234-4630-b935-383532613533/grocery-store.png"></q-img>
         <div class="korzink">Корзина</div>
         </div>
         <div>
           <div class='container2' v-for="cartItem in cartStore.cartItems">
-          <q-card>
+          <q-card class="card1">
             <q-img class='tshirt' :src="cartItem.image"></q-img>
-           <div>
+           <div class="title">
              {{cartItem.name}}
            </div>
-            <button class="minus">
+            <button class="minusButton">
               <img class='minus' src="https://avatars.mds.yandex.net/get-entity_search/10843572/1133902588/SUx182_2x">
             </button>
-            <div>1</div>
-            <button class="plus">
+            <div class="kolvo">
+              1
+            </div>
+            <button class="plusButton">
               <img class='plus' src="https://avatars.mds.yandex.net/i?id=1fdb23cb557c261e07f43290aa3b6f7224bd50a1-6209931-images-thumbs&n=13">
             </button>
-            <div>{{cartItem.price}} ₽</div>
-            <button class="delet"><img class="delet" src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3517303/trash-can-icon-md.png"></button>
+            <div class="price">
+              {{cartItem.price}} ₽
+            </div>
+            <button class="delet">
+              <img class="delet" src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3517303/trash-can-icon-md.png">
+            </button>
           </q-card>
           </div>
-        <div class="Summ">Сумма заказа:</div>
-        <q-btn class="join" color="black" label="Оформить заказ" />
+        <div class="container4">
+          <div class="Summ">
+            Сумма заказа:
+          </div>
+          <q-btn class="accept" color="black" label="Оформить заказ"/>
+        </div>
         </div>
       </q-card-section>
     </q-card>
   </div>
 
-  <div class="container2">
+  <div class="container3">
     <q-card class="shopinf" style="background: black">
       <q-card-section>
         <footer class="info" style="color: white">© 2025 Железная логика. Все права защищены. ОГРН 1196658005851</footer>
@@ -66,6 +78,47 @@ const cartStore = useCartStore();
 
 <style scoped lang="sass">
 
+
+
+.delete
+  cursor: pointer
+
+.price
+  font-size: 45px
+  padding-top: 30px
+  margin-left: 200px
+
+.kolvo
+  padding-top: 45px
+  font-size: 24px
+  margin-left: 40px
+
+.plusButton
+  width: 50px
+  border-style: none
+  color: white
+  background-color: white
+  margin-left: 30px
+  cursor: pointer
+
+.minusButton
+  width: 50px
+  height: 30px
+  border-style: none
+  color: white
+  background-color: white
+  margin-top: 38px
+  margin-left: 300px
+  cursor: pointer
+
+.title
+  padding-left: 40px
+  margin-top: 50px
+  font-size: 24px
+
+.card1
+  display: flex
+  flex-direction: row
 
 .minus
   width: 50px
@@ -81,9 +134,11 @@ const cartStore = useCartStore();
 
 .delet
   width: 50px
+  margin-left: 130px
   border-style: none
   color: white
   background-color: white
+  cursor: pointer
 
 .shopinf
   height: 100px
@@ -140,11 +195,11 @@ const cartStore = useCartStore();
 
 .Summ
   font-size: 30px
-  margin-left: 900px
-  margin-top: 350px
+  margin-left: 1050px
+  margin-top: 220px
 
-.join
-  margin-left: 1300px
+.accept
+  margin-left: 1400px
   margin-top: -70px
   font-size: 17px
 
@@ -161,13 +216,20 @@ const cartStore = useCartStore();
 .image6
   width: 2%
   margin-top: 10px
-  margin-left: 1300px
+  margin-left: 1430px
 
 .deletAll
-  margin-left: 1340px
+  margin-left: 1470px
   font-weight: bold
   font-size: 22px
   margin-top: -34px
+
 .tshirt
   width: 100px
+  margin-left: 50px
+  border-radius: 20px
+
+.container2
+  margin-top: 20px
+
 </style>

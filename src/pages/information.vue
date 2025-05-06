@@ -47,7 +47,7 @@ let hasInCart = computed(() => {
         </div>
         <div class="t-shirtprice">1 000 ₽</div>
         <q-btn
-          :class="{'join-active': hasInCart === 'true', 'join': hasInCart = 'false'}"
+          :class="{'join-active': hasInCart === true, 'join': hasInCart === false}"
 
 
           @click="cartStore.addCartItem({
