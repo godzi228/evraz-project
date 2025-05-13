@@ -5,16 +5,19 @@ import { ref, computed} from "vue";
 const cartStore = useCartStore();
 
 
+
 function deleteCartItemAll() {
 cartStore.cartItems.splice(cartStore.cartItems.length = '')
 }
 
 function deleteCartItem(index) {
   for(let cartItem in cartStore.cartItems){
-    cartItem.name.splice(index, 1)
+    cartStore.cartItems.splice()
   }
 
 }
+
+
 </script>
 
 
@@ -70,7 +73,7 @@ function deleteCartItem(index) {
           </div>
         <div class="container4">
           <div class="Summ">
-            Сумма заказа:
+            Сумма заказа: {{summ}}
           </div>
           <q-btn class="accept" color="black" label="Оформить заказ"/>
         </div>
@@ -222,6 +225,7 @@ function deleteCartItem(index) {
   margin-left: 50px
   font-weight: bold
   font-size: 30px
+
   margin-top: -60px
 
 .image6
