@@ -58,7 +58,7 @@ let hasInCart = computed(() => {
           @click="cartStore.addCartItem({
           image: tshirt1,
           name: 'Футболка с Хайзенбергом',
-          price: '1 000',
+          price: 1_000,
 
         })">Добавить в корзину</q-btn>
       </q-card-section>

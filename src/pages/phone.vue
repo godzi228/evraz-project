@@ -49,7 +49,7 @@ let phone = ref('https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/17104
             @click="cartStore.addCartItem({
           image: phone1,
           name: 'Смартфон iPhone 14 Pro',
-          price: '100 500',
+          price: 100_500,
         })">Добавить в корзину</q-btn>
         </div>
       </q-card-section>

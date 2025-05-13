@@ -5,6 +5,18 @@ export const useCartStore = defineStore('cart', {
     cartItems: []
   }),
 
+  getters: {
+    getTotal: state => {
+      let total = 0
+      for (let cartItem of state.cartItems) {
+        console.log()
+        total += cartItem.quantity * cartItem.price
+      }
+      return total
+    },
+
+  },
+
   actions: {
     addCartItem(product) {
       for (let cartItem of this.cartItems) {
@@ -25,7 +37,8 @@ export const useCartStore = defineStore('cart', {
       if(product.quantity > 1) {
         product.quantity -= 1
       }
-    }
+    },
+
   }
 })
 

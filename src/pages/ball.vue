@@ -48,7 +48,7 @@ let ball1 = ref('https://avatars.mds.yandex.net/get-mpic/5283489/2a0000018f9b756
             @click="cartStore.addCartItem({
           image: ball1,
           name: 'Мяч футбольный Demix',
-          price: '35 000',
+          price: 35_000,
         })">Добавить в корзину</q-btn>
         </div>
       </q-card-section>
