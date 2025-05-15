@@ -1,6 +1,8 @@
 <script setup>
+  import {useCartStore} from 'src/stores/cart.js'
+  const cartStore = useCartStore()
 
-const products = [
+  const products = [
   {
     path: '/information/t-shirt',
     image: 'https://ir-8.ozone.ru/s3/multimedia-1-6/wc1000/7197436050.jpg',
@@ -19,11 +21,12 @@ const products = [
     price: '100 500',
     name: 'Телефон',
   },
-]
+  ]
+
 </script>
 
 <template>
-  <div class="container1">
+<div class="container1">
       <q-card class="my-card">
         <q-card-section>
           <router-link :to="{ path: '/information' }"><q-img class="image" src="https://avatars.mds.yandex.net/i?id=d8e3bb911c948ede43e0b259fa4ba5e2811516ff-12473946-images-thumbs&n=13"></q-img></router-link>
@@ -31,6 +34,7 @@ const products = [
           <router-link :to="{ path: '/information/korzina' }"><q-img class="image4" src="https://static.tildacdn.com/tild6137-6234-4630-b935-383532613533/grocery-store.png"></q-img></router-link>
           <div class="login">Павел</div>
           <div class="basket">Корзина</div>
+          <q-badge rounded color="red" :label='cartStore.getIcon'/>
         </q-card-section>
       </q-card>
   </div>
