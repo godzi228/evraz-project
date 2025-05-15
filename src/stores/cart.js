@@ -16,9 +16,12 @@ export const useCartStore = defineStore('cart', {
     },
     getIcon: state => {
       let icon = 0
-        for(let cartItem of state.cartItems) {
-          icon = state.cartItems.length
-        }
+          for (let cartItem of state.cartItems) {
+            icon = state.cartItems.length
+            console.log(icon)
+          }
+          return icon
+
     }
 
   },
