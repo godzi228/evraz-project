@@ -176,7 +176,7 @@ function confirmOrder() {
 
 .delet
   width: 50px
-  margin-left: 130px
+  margin-left: 13%
   border-style: none
   color: white
   background-color: white
@@ -235,8 +235,8 @@ function confirmOrder() {
   margin-top: 4%
   border-radius: 30px
 
-
 .Summ
+
   font-size: 30px
 
 .accept
