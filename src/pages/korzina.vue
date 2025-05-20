@@ -106,6 +106,7 @@ function deleteCartItem(index) {
 
 <style scoped lang="sass">
 .container5_1
+  display: inline
 
 .container5
   display: none
