@@ -5,7 +5,6 @@ import { ref, computed} from "vue";
 const cartStore = useCartStore();
 
 
-
 for (let cartItem in cartStore) {
   let name = cartItem.name;
 }
@@ -18,17 +17,10 @@ function deleteCartItem(index) {
   cartStore.cartItems.splice(index, 1);
 }
 
-function confirmOrder() {
-  cartStore.cartItems = []
-  let orders = [
-    {
-      image: "https://avatars.mds.yandex.net/i?id=286b148b39aa785a8d368e7673d908d699b350b3-5220431-images-thumbs&n=13",
-      name: 'Успешно',
-      name2: 'Ваш заказ был оформлен'
-    }
-  ]
 
-}
+
+
+
 </script>
 
 
@@ -36,7 +28,7 @@ function confirmOrder() {
   <header class="container1">
     <q-card class="my-card">
       <q-card-section>
-        <q-badge rounded color="red" :label='cartStore.getIcon'   class="label1"/>
+        <q-badge rounded color="red" :label='cartStore.getIcon' :class="{'label1': cartStore.getIcon === 0, 'label2': cartStore.getIcon >= 1}"/>
         <router-link :to="{ path: '/information' }"><q-img class="image" src="https://avatars.mds.yandex.net/i?id=d8e3bb911c948ede43e0b259fa4ba5e2811516ff-12473946-images-thumbs&n=13"></q-img></router-link>
         <q-img class="image3" src="https://sun9-29.userapi.com/s/v1/ig2/jR0TieOaHjnQ-Vstw6psyVlF-vL4kxZR3nKZv3-zegtmwQ7_HUIO462wggJ_-4m6BfD0N3JxYxCU_b9LMmQ4LXkJ.jpg?size=400x400&quality=96&crop=120,54,960,960&ava=1"></q-img>
         <q-img class="image4" src="https://static.tildacdn.com/tild6137-6234-4630-b935-383532613533/grocery-store.png"></q-img>
@@ -83,13 +75,13 @@ function confirmOrder() {
             </button>
           </q-card>
           </div>
-          <div class="container5"  v-for="order in orders">
-            <img class="image7" :src='order.image'>
+          <div :class="{'container5': cartStore.cartItems.length >= 0, }">
+            <img class="image7" src="https://avatars.mds.yandex.net/i?id=286b148b39aa785a8d368e7673d908d699b350b3-5220431-images-thumbs&n=13">
             <div class="div1">
-              {{ order.name }}
+              Успешно
             </div>
             <div class="div2">
-              {{ order.name2 }}
+              Ваш заказ был оформлен
             </div>
           </div>
         <div class="container4">
@@ -113,6 +105,12 @@ function confirmOrder() {
 </template>
 
 <style scoped lang="sass">
+.container5_1
+
+.container5
+  display: none
+
+
 .label2
   margin-left: 94%
 
