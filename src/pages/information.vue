@@ -78,53 +78,58 @@ let hasInCart = computed(() => {
 <style scoped lang="sass">
 .label1
   margin-left: 94%
+  visibility: hidden
+
+.label2
+  margin-left: 94%
 
 .container1
   display: flex
   justify-content: center
 
 .my-card
-  height: 100px
   width: 88%
   border-radius: 30px
 
 .image
-  margin-top: -7px
+  margin-top: -1.5%
   width: 5%
+  border-radius: 15px
 
 .basket
-  margin-left: 1507px
-  margin-top: -21px
+  margin-left: 91%
+  margin-top: -1.3%
   font-weight: bold
 
 .image3
-  margin-left: 1345px
-  margin-top: -20px
+  margin-left: 82.3%
+  margin-top: -2%
   width: 2%
 
 .login
-  margin-left: 1422px
-  margin-top: -50px
+  margin-left: 87%
+  margin-top: -3%
   font-weight: bold
 
 .image4
-  margin-left: 1514px
-  margin-top: -115px
+  margin-left: 91.6%
+  margin-top: -6.5%
   width: 2%
 
 .shopinf
+  width: 100%
   height: 100px
-  margin-top: 160px
+  margin-top: 8.6%
 
 .info
   font-size: 20px
-  padding-left: 200px
+  padding-left: 10%
   padding-top: 1%
 
 .main-card
   width: 88%
   height: 500px
-  margin-top: 100px
+  margin-top: 5%
   border-radius: 30px
 
 .container
@@ -133,52 +138,52 @@ let hasInCart = computed(() => {
 
 .image1
   width: 20%
-  margin-top: -180px
-  margin-left: 140px
+  margin-top: -11%
+  margin-left: 10%
   border-radius: 15px
 
 .t-shirtheis
-  margin-left: 600px
-  margin-top: -400px
-  font-size: 40px
+  font-size: 48px
+  margin-left: 33%
+  margin-top: -28%
 
 .t-shirtHeisInf
-  margin-top: 40px
-  margin-left: 600px
-  font-size: 18px
+  font-size: 24px
+  margin-left: 33.5%
+  margin-top: 2%
 
 .t-shirtprice
-  margin-top: 40px
-  margin-left: 600px
-  font-size: 40px
+  font-size: 35px
   font-weight: bold
+  margin-top: 2%
+  margin-left: 34%
 
 .join
-  margin-left: 610px
-  margin-top: 20px
-  width: 230px
+  margin-left: 34%
+  margin-top: 2%
+  width: 23%
   height: 60px
   border-radius: 10px
   background-color: black
   color: white
 
 .join-active
-  margin-left: 610px
-  margin-top: 20px
-  width: 230px
+  margin-left: 34%
+  margin-top: 2%
+  width: 23%
   height: 60px
   border-radius: 10px
   background-color: green
 
 .image2
   width: 4%
-  margin-top: -100px
-  margin-left: -65px
+  margin-top: -6%
+  margin-left: -4%
   border-radius: 15px
 
 .image5
   width: 4%
-  margin-left: 10px
-  margin-top: 110px
+  margin-left: 2%
+  margin-top: 7%
   border-radius: 15px
 </style>
