@@ -113,8 +113,12 @@ function confirmOrder() {
 </template>
 
 <style scoped lang="sass">
+.label2
+  margin-left: 94%
+
 .label1
   margin-left: 94%
+  visibility: hidden
 
 .container4
   display: flex
@@ -126,34 +130,32 @@ function confirmOrder() {
 .price
   font-size: 24px
   padding-top: 50px
-  margin-left: 200px
+  margin-left: 15%
 
 .kolvo
-  padding-top: 45px
+  padding-top: 3%
   font-size: 24px
-  margin-left: 40px
+  margin-left: 3%
 
 .plusButton
-  width: 50px
+  width: 2%
   border-style: none
   color: white
   background-color: white
-  margin-left: 30px
+  margin-left: 2%
   cursor: pointer
 
 .minusButton
-  width: 50px
-  height: 30px
+  width: 2%
   border-style: none
   color: white
   background-color: white
-  margin-top: 38px
-  margin-left: 300px
+  margin-left: 20%
   cursor: pointer
 
 .title
   padding-left: 40px
-  margin-top: 50px
+  margin-top: 3%
   font-size: 24px
 
 .card1
@@ -181,12 +183,13 @@ function confirmOrder() {
   cursor: pointer
 
 .shopinf
+  width: 100%
   height: 100px
-  margin-top: 260px
+  margin-top: 4.2%
 
 .info
   font-size: 20px
-  padding-left: 200px
+  padding-left: 10%
   padding-top: 1%
 
 .container1
@@ -194,33 +197,32 @@ function confirmOrder() {
   justify-content: center
 
 .my-card
-  height: 100px
   width: 88%
   border-radius: 30px
 
 .image
-  margin-top: -7px
+  margin-top: -1.5%
   width: 5%
   border-radius: 15px
 
 .image3
-  margin-left: 1345px
-  margin-top: -20px
-  width: 2%
-
-.image4
-  margin-left: 1514px
-  margin-top: -115px
+  margin-left: 82.3%
+  margin-top: -2%
   width: 2%
 
 .login
-  margin-left: 1422px
-  margin-top: -50px
+  margin-left: 87%
+  margin-top: -3%
   font-weight: bold
 
+.image4
+  margin-left: 91.6%
+  margin-top: -6.5%
+  width: 2%
+
 .basket
-  margin-left: 1507px
-  margin-top: -21px
+  margin-left: 91%
+  margin-top: -1.3%
   font-weight: bold
 
 .container
@@ -229,9 +231,10 @@ function confirmOrder() {
 
 .main-card
   width: 88%
-  height: 500px
-  margin-top: 100px
+  height: 600px
+  margin-top: 4%
   border-radius: 30px
+
 
 .Summ
   font-size: 30px
