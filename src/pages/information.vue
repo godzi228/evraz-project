@@ -185,5 +185,5 @@ let hasInCart = computed(() => {
   width: 4%
   margin-left: 2%
   margin-top: 7%
-  border-radius: 15px
+  border-radius: 14px
 </style>
