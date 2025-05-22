@@ -4,10 +4,7 @@ import { ref, computed} from "vue";
 
 const cartStore = useCartStore();
 
-
-for (let cartItem in cartStore) {
-  let name = cartItem.name;
-}
+const isOrderConfirmed = ref(true);
 
 function deleteCartItemAll() {
   cartStore.cartItems = []
@@ -17,7 +14,16 @@ function deleteCartItem(index) {
   cartStore.cartItems.splice(index, 1);
 }
 
-
+function confirmOrder() {
+  cartStore.cartItems = []
+  const heisenberg = confirm('Вы уверены что хотите оформить заказ?')
+  if(heisenberg === true) {
+    isOrderConfirmed.value = true
+  }
+  else {
+    isOrderConfirmed.value = false
+  }
+}
 
 
 
@@ -41,55 +47,56 @@ function deleteCartItem(index) {
   <div class="container">
     <q-card class="main-card">
       <q-card-section>
-        <a class="delete">
-        <q-img class="image6" src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3517303/trash-can-icon-md.png"></q-img>
-        <div class="deletAll" @click="deleteCartItemAll">
-          Очистить всё
+        <div v-if="isOrderConfirmed">
+          <img>
         </div>
-        </a>
-        <div>
-        <q-img class="image5" src="https://static.tildacdn.com/tild6137-6234-4630-b935-383532613533/grocery-store.png"></q-img>
-        <div class="korzink">Корзина</div>
-        </div>
-        <div>
-          <div class='container2' v-for="(cartItem, index) in cartStore.cartItems">
-          <q-card class="card1">
-            <q-img class='tshirt' :src="cartItem.image"></q-img>
-           <div class="title">
-             {{cartItem.name}}
-           </div>
-            <button class="minusButton" @click="cartStore.decreaseCartItem(cartItem)">
-              <img class='minus' src="https://avatars.mds.yandex.net/get-entity_search/10843572/1133902588/SUx182_2x">
-            </button>
-            <div class="kolvo">
-              {{ cartItem.quantity }}
+
+        <div v-else>
+          <a class="delete">
+            <q-img class="image6"
+                   src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3517303/trash-can-icon-md.png"></q-img>
+            <div class="deletAll" @click="deleteCartItemAll">
+              Очистить всё
             </div>
-            <button class="plusButton" @click="cartStore.increaseCartItem(cartItem)">
-              <img class='plus' src="https://avatars.mds.yandex.net/i?id=1fdb23cb557c261e07f43290aa3b6f7224bd50a1-6209931-images-thumbs&n=13">
-            </button>
-            <div class="price">
-              {{cartItem.price}} ₽
-            </div>
-            <button class="delet" @click="deleteCartItem(index)">
-              <img class="delet" src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3517303/trash-can-icon-md.png">
-            </button>
-          </q-card>
+          </a>
+          <div>
+            <q-img class="image5"
+                   src="https://static.tildacdn.com/tild6137-6234-4630-b935-383532613533/grocery-store.png"></q-img>
+            <div class="korzink">Корзина</div>
           </div>
-          <div :class="{'container5': cartStore.cartItems.length >= 0, }">
-            <img class="image7" src="https://avatars.mds.yandex.net/i?id=286b148b39aa785a8d368e7673d908d699b350b3-5220431-images-thumbs&n=13">
-            <div class="div1">
-              Успешно
+          <div>
+            <div class='container2' v-for="(cartItem, index) in cartStore.cartItems">
+              <q-card class="card1">
+                <q-img class='tshirt' :src="cartItem.image"></q-img>
+                <div class="title">
+                  {{ cartItem.name }}
+                </div>
+                <button class="minusButton" @click="cartStore.decreaseCartItem(cartItem)">
+                  <img class='minus' src="https://avatars.mds.yandex.net/get-entity_search/10843572/1133902588/SUx182_2x">
+                </button>
+                <div class="kolvo">
+                  {{ cartItem.quantity }}
+                </div>
+                <button class="plusButton" @click="cartStore.increaseCartItem(cartItem)">
+                  <img class='plus'
+                       src="https://avatars.mds.yandex.net/i?id=1fdb23cb557c261e07f43290aa3b6f7224bd50a1-6209931-images-thumbs&n=13">
+                </button>
+                <div class="price">
+                  {{ cartItem.price }} ₽
+                </div>
+                <button class="delet" @click="deleteCartItem(index)">
+                  <img class="delet"
+                       src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3517303/trash-can-icon-md.png">
+                </button>
+              </q-card>
             </div>
-            <div class="div2">
-              Ваш заказ был оформлен
+            <div class="container4">
+              <div class="Summ">
+                Сумма заказа: {{ cartStore.getTotal }} ₽
+              </div>
+              <q-btn class="accept" color="black" label="Оформить заказ" @click="confirmOrder"/>
             </div>
           </div>
-        <div class="container4">
-          <div class="Summ">
-            Сумма заказа: {{ cartStore.getTotal }} ₽
-          </div>
-          <q-btn class="accept" color="black" label="Оформить заказ" @click="confirmOrder"/>
-        </div>
         </div>
       </q-card-section>
     </q-card>
@@ -105,11 +112,9 @@ function deleteCartItem(index) {
 </template>
 
 <style scoped lang="sass">
-.container5_1
-  display: inline
-
 .container5
-  display: none
+  display: flex
+  justify-content: center
 
 
 .label2
