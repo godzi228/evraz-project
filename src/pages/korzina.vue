@@ -4,7 +4,7 @@ import { ref, computed} from "vue";
 
 const cartStore = useCartStore();
 
-const isOrderConfirmed = ref(true);
+const isOrderConfirmed = ref(false);
 
 function deleteCartItemAll() {
   cartStore.cartItems = []
@@ -15,9 +15,9 @@ function deleteCartItem(index) {
 }
 
 function confirmOrder() {
-  cartStore.cartItems = []
   const heisenberg = confirm('Вы уверены что хотите оформить заказ?')
   if(heisenberg === true) {
+    cartStore.cartItems = []
     isOrderConfirmed.value = true
   }
   else {
@@ -47,7 +47,7 @@ function confirmOrder() {
   <div class="container">
     <q-card class="main-card">
       <q-card-section>
-        <div v-if="isOrderConfirmed">
+        <div v-if="isOrderConfirmed" class="container5">
           <img class="image7" src="https://avatars.mds.yandex.net/i?id=286b148b39aa785a8d368e7673d908d699b350b3-5220431-images-thumbs&n=13">
           <div class="div1">
             Успешно
@@ -120,7 +120,21 @@ function confirmOrder() {
 <style scoped lang="sass">
 .container5
   display: flex
-  justify-content: center
+  align-items: center
+  flex-direction: column
+
+.image7
+  width: 20%
+
+.div1
+  font-size: 48px
+  font-weight: bold
+  margin-top: 1%
+
+.div2
+  font-size: 48px
+  font-weight: bold
+  margin-top: 2%
 
 
 .label2
