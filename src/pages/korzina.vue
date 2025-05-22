@@ -48,7 +48,13 @@ function confirmOrder() {
     <q-card class="main-card">
       <q-card-section>
         <div v-if="isOrderConfirmed">
-          <img>
+          <img class="image7" src="https://avatars.mds.yandex.net/i?id=286b148b39aa785a8d368e7673d908d699b350b3-5220431-images-thumbs&n=13">
+          <div class="div1">
+            Успешно
+          </div>
+          <div class="div2">
+            Ваш заказ был оформлен
+          </div>
         </div>
 
         <div v-else>
