@@ -1,9 +1,10 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { useCartStore } from 'src/stores/cart.js'
+import {useUserStore} from 'src/stores/user.js'
 
 const cartStore = useCartStore()
-
+const UserInfo = useUserStore()
 
 let hasInCart = computed(() => {
   for (let cartItem of cartStore.cartItems) {
@@ -28,7 +29,7 @@ let ball1 = ref('https://avatars.mds.yandex.net/get-mpic/5283489/2a0000018f9b756
         <router-link :to="{ path: '/information' }"><q-img class="image" src="https://avatars.mds.yandex.net/i?id=d8e3bb911c948ede43e0b259fa4ba5e2811516ff-12473946-images-thumbs&n=13"></q-img></router-link>
         <q-img class="image3" src="https://sun9-29.userapi.com/s/v1/ig2/jR0TieOaHjnQ-Vstw6psyVlF-vL4kxZR3nKZv3-zegtmwQ7_HUIO462wggJ_-4m6BfD0N3JxYxCU_b9LMmQ4LXkJ.jpg?size=400x400&quality=96&crop=120,54,960,960&ava=1"></q-img>
         <router-link :to="{ path: '/information/korzina' }"><q-img class="image4" src="https://static.tildacdn.com/tild6137-6234-4630-b935-383532613533/grocery-store.png"></q-img></router-link>
-        <div class="login">Павел</div>
+        <div class="login">{{ UserInfo.getUserName }}</div>
         <div class="basket">Корзина</div>
       </q-card-section>
     </q-card>

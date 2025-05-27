@@ -7,7 +7,7 @@
       <div class="text-h6">Вход</div>
     </q-card-section>
     <q-input class="phNum" standout="bg-teal text-white" v-model="phoneNum1" mask="+7 (###) ###-##-##"  label="Номер телефона"/>
-    <q-input class="phNum" standout="bg-teal text-white" v-model="password1"  label="Пароль" />
+    <q-input class="phNum" standout="bg-teal text-white" v-model="password1"  label="Пароль" type="password" />
     <q-btn class="join" color="black" label="Войти" @click="ConfirmLogin"/>
 
   </q-card>
@@ -15,21 +15,26 @@
 
 <script setup>
 import {ref} from 'vue'
+import {useUserStore} from "stores/user.js";
+const UserInfo = useUserStore()
 
 let phoneNumbers = [{
   phone: '+7 (912) 247-41-01',
   name: 'Елисей',
-  password: 'Елисей'
+  password: 'Елисей',
+  money: 10000
   },
   {
     phone: '+7 (922) 227-20-10',
     name: 'Михаил',
-    password: 'Михаил'
+    password: 'Михаил',
+    money: 50000
   },
   {
     phone: '+7 (912) 345-67-89',
     name: 'Артем',
-    password: 'Артем'
+    password: 'Артем',
+    money: 100000
   }
 ]
 
@@ -38,6 +43,7 @@ let password1 = ref('')
 function ConfirmLogin() {
   for (let phoneNumber of phoneNumbers) {
     if (phoneNum1.value === phoneNumber.phone && password1.value === phoneNumber.password) {
+      UserInfo.user = phoneNumber;
       window.location.href = '/#/information'
       return
     }

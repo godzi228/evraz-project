@@ -1,7 +1,8 @@
 <script setup>
 import { useCartStore} from "../stores/cart.js";
 import { ref, computed} from "vue";
-
+import {useUserStore} from 'src/stores/user.js'
+const UserInfo = useUserStore()
 const cartStore = useCartStore();
 
 const isOrderConfirmed = ref(false);
@@ -17,8 +18,14 @@ function deleteCartItem(index) {
 function confirmOrder() {
   const heisenberg = confirm('Вы уверены что хотите оформить заказ?')
   if(heisenberg === true) {
-    cartStore.cartItems = []
-    isOrderConfirmed.value = true
+    if (UserInfo.getUserMoney > cartStore.getTotal){
+      UserInfo.user.money -= cartStore.getTotal
+      cartStore.cartItems = []
+      isOrderConfirmed.value = true
+    }
+    else {
+      alert("Недостаточно средств")
+    }
   }
   else {
     isOrderConfirmed.value = false
@@ -38,7 +45,7 @@ function confirmOrder() {
         <router-link :to="{ path: '/information' }"><q-img class="image" src="https://avatars.mds.yandex.net/i?id=d8e3bb911c948ede43e0b259fa4ba5e2811516ff-12473946-images-thumbs&n=13"></q-img></router-link>
         <q-img class="image3" src="https://sun9-29.userapi.com/s/v1/ig2/jR0TieOaHjnQ-Vstw6psyVlF-vL4kxZR3nKZv3-zegtmwQ7_HUIO462wggJ_-4m6BfD0N3JxYxCU_b9LMmQ4LXkJ.jpg?size=400x400&quality=96&crop=120,54,960,960&ava=1"></q-img>
         <q-img class="image4" src="https://static.tildacdn.com/tild6137-6234-4630-b935-383532613533/grocery-store.png"></q-img>
-        <div class="login">Павел</div>
+        <div class="login">{{ UserInfo.getUserName }}</div>
         <div class="basket">Корзина</div>
       </q-card-section>
     </q-card>
@@ -99,6 +106,9 @@ function confirmOrder() {
             <div class="container4">
               <div class="Summ">
                 Сумма заказа: {{ cartStore.getTotal }} ₽
+              </div>
+              <div class="Summ">
+                ваш баланс: {{ UserInfo.getUserMoney }} ₽
               </div>
               <q-btn class="accept" color="black" label="Оформить заказ" @click="confirmOrder"/>
             </div>
