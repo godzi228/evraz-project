@@ -25,8 +25,8 @@
   },
     {
       path: '/information/laptop',
-      image: 'https://c.dns-shop.ru/thumb/st1/fit/0/0/c1d9fab3660941a88ad99f69f5fb566d/31d0899cfc41b4fdac4cf23420fea75f144c9afee5d98ad75d366c228a326084.jpg.webp',
-      price: '86 299',
+      image: 'https://ekt-basket-cdn-01.geobasket.ru/vol3920/part392030/392030137/images/c246x328/10.webp',
+      price: '33 289',
       name: 'Ноутбук',
     },
     {
