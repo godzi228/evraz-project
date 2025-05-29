@@ -44,6 +44,7 @@ function ConfirmLogin() {
   for (let phoneNumber of phoneNumbers) {
     if (phoneNum1.value === phoneNumber.phone && password1.value === phoneNumber.password) {
       UserInfo.user = phoneNumber;
+      localStorage.setItem('user', JSON.stringify(phoneNumber))
       window.location.href = '/#/information'
       return
     }
