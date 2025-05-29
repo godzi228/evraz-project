@@ -10,14 +10,14 @@ let cup1 = ref('https://ekt-basket-cdn-01.geobasket.ru/vol911/part91192/91192130
 
 let hasInCart = computed(() => {
   for (let cartItem of cartStore.cartItems) {
-    if (cartItem.name === 'Кружка Во все тяжкие') {
+    if (cartItem.name === 'Ноутбук') {
       return true
     }
   }
   return false
 })
 
-let cup = ref('https://ekt-basket-cdn-01.geobasket.ru/vol911/part91192/91192130/images/c246x328/1.webp')
+let cup = ref('https://c.dns-shop.ru/thumb/st1/fit/0/0/c1d9fab3660941a88ad99f69f5fb566d/31d0899cfc41b4fdac4cf23420fea75f144c9afee5d98ad75d366c228a326084.jpg.webp')
 </script>
 
 <template>
@@ -38,18 +38,18 @@ let cup = ref('https://ekt-basket-cdn-01.geobasket.ru/vol911/part91192/91192130/
       <q-card-section>
         <div class="football1">
           <q-img class="image2"  :src="cup"></q-img>
-          <q-img class="image5" src="https://ekt-basket-cdn-01.geobasket.ru/vol911/part91192/91192130/images/c246x328/3.webp" @click="cup = 'https://ekt-basket-cdn-01.geobasket.ru/vol911/part91192/91192130/images/c246x328/3.webp '"></q-img>
-          <q-img class="image6"  src="https://ekt-basket-cdn-01.geobasket.ru/vol911/part91192/91192130/images/c246x328/1.webp" @click="cup = 'https://ekt-basket-cdn-01.geobasket.ru/vol911/part91192/91192130/images/c246x328/1.webp'"></q-img>
-          <div class="football">Кружка Во все тяжкие, с принтом Уолтер Уайт, Джесси Пинкмэн</div>
-          <div class="opis">Кружка Во все тяжкие, с принтом Уолтер Уайт, Джесси Пинкмэн. Кружки Breaking Bad - это именно то, что нужно, чтобы начать свой день с улыбки.</div>
-          <div class="footballprice">1 370 ₽</div>
+          <q-img class="image5" src="https://c.dns-shop.ru/thumb/st1/fit/wm/0/0/1c88adbf2e392c42d4aacc018d6603c2/8957fd05a3c74a0ed21662ae1c463b228a57c517edb1d241bc1b8e4859dbdaa7.jpg.webp" @click="cup = 'https://c.dns-shop.ru/thumb/st1/fit/wm/0/0/1c88adbf2e392c42d4aacc018d6603c2/8957fd05a3c74a0ed21662ae1c463b228a57c517edb1d241bc1b8e4859dbdaa7.jpg.webp'"></q-img>
+          <q-img class="image6"  src="https://c.dns-shop.ru/thumb/st1/fit/0/0/c1d9fab3660941a88ad99f69f5fb566d/31d0899cfc41b4fdac4cf23420fea75f144c9afee5d98ad75d366c228a326084.jpg.webp" @click="cup = 'https://c.dns-shop.ru/thumb/st1/fit/0/0/c1d9fab3660941a88ad99f69f5fb566d/31d0899cfc41b4fdac4cf23420fea75f144c9afee5d98ad75d366c228a326084.jpg.webp'"></q-img>
+          <div class="football">Ноутбук MAIBENBEN X17A черный</div>
+          <div class="opis">английская/русская раскладка, 1920x1080, IPS, AMD Ryzen 5 6600H, ядра: 6, RAM 16 ГБ, SSD 512 ГБ, GeForce RTX 3050 для ноутбуков 4 ГБ</div>
+          <div class="footballprice">86 299 ₽</div>
           <q-btn
-            :class="{'join-active': hasInCart === true, 'join': hasInCart === false}"
+              :class="{'join-active': hasInCart === true, 'join': hasInCart === false}"
 
-            @click="cartStore.addCartItem({
+              @click="cartStore.addCartItem({
           image: cup1,
-          name: 'Кружка Во все тяжкие',
-          price: 1_370,
+          name: 'Ноутбук',
+          price: 86_299,
         })">Добавить в корзину</q-btn>
         </div>
       </q-card-section>
@@ -87,6 +87,7 @@ let cup = ref('https://ekt-basket-cdn-01.geobasket.ru/vol911/part91192/91192130/
 .container
   display: flex
   justify-content: center
+  margin-;
 
 .main-card
   width: 88%

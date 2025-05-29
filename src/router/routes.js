@@ -43,6 +43,12 @@ const routes = [
       { path: '', component: () => import('pages/BreakingBadCup.vue') }
     ]
   },
+  {path: '/information/laptop',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/laptop.vue') }
+    ]
+  },
 
   // Always leave this as last one,
   // but you can also remove it
