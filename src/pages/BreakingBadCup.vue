@@ -71,7 +71,9 @@ let cup = ref('https://ekt-basket-cdn-01.geobasket.ru/vol911/part91192/91192130/
   position: absolute
 
 .label1
-  margin-left: 94%
+  margin-top: 0.3%
+  margin-left: 90.5%
+  position: absolute
   visibility: hidden
 
 .container1

@@ -10,11 +10,18 @@ const cartStore = useCartStore();
 const isOrderConfirmed = ref(false);
 
 function deleteCartItemAll() {
-  cartStore.cartItems = []
+  let heisenberg = confirm('Вы уверены что хотите очистить корзину?')
+  if(heisenberg === true) {
+    cartStore.cartItems = []
+  }
 }
 
 function deleteCartItem(index) {
-  cartStore.cartItems.splice(index, 1);
+  let heisenberg = confirm('Вы уверены что хотите удалить товар?')
+  if(heisenberg === true) {
+    cartStore.cartItems.splice(index, 1);
+  }
+
 }
 
 function confirmOrder() {
@@ -158,44 +165,10 @@ function confirmOrder() {
   position: absolute
 
 .label1
-  margin-left: 94%
+  margin-top: 0.3%
+  margin-left: 90.5%
+  position: absolute
   visibility: hidden
-
-.my-card
-  width: 88%
-  height: 100px
-  border-radius: 30px
-
-.image
-  margin-left: 1%
-  margin-top: -0.4%
-  width: 5%
-  border-radius: 15px
-  position: absolute
-
-.image3
-  margin-left: 82.5%
-  margin-top: 1%
-  width: 2%
-  position: absolute
-
-.login
-  margin-left: 82%
-  margin-top: 3%
-  font-weight: bold
-  position: absolute
-
-.image4
-  margin-left: 88.5%
-  margin-top: 1%
-  width: 2%
-  position: absolute
-
-.basket
-  margin-left: 88%
-  margin-top: 3%
-  font-weight: bold
-  position: absolute
 
 .container4
   display: flex
@@ -292,7 +265,41 @@ function confirmOrder() {
   display: flex
   justify-content: center
 
+.my-card
+  width: 88%
+  height: 100px
+  border-radius: 30px
 
+.image
+  margin-left: 1%
+  margin-top: -0.4%
+  width: 5%
+  border-radius: 15px
+  position: absolute
+
+.image3
+  margin-left: 82.5%
+  margin-top: 1%
+  width: 2%
+  position: absolute
+
+.login
+  margin-left: 82%
+  margin-top: 3%
+  font-weight: bold
+  position: absolute
+
+.image4
+  margin-left: 88.5%
+  margin-top: 1%
+  width: 2%
+  position: absolute
+
+.basket
+  margin-left: 88%
+  margin-top: 3%
+  font-weight: bold
+  position: absolute
 
 .container
   display: flex

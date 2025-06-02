@@ -77,16 +77,15 @@ let hasInCart = computed(() => {
 </template>
 
 <style scoped lang="sass">
-
-
-
 .label2
   margin-top: 0.3%
   margin-left: 90.5%
   position: absolute
 
 .label1
-  margin-left: 94%
+  margin-top: 0.3%
+  margin-left: 90.5%
+  position: absolute
   visibility: hidden
 
 .container1

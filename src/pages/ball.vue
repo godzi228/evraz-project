@@ -72,7 +72,9 @@ let ball1 = ref('https://avatars.mds.yandex.net/get-mpic/5283489/2a0000018f9b756
   position: absolute
 
 .label1
-  margin-left: 94%
+  margin-top: 0.3%
+  margin-left: 90.5%
+  position: absolute
   visibility: hidden
 
 .container1

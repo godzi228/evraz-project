@@ -72,7 +72,9 @@ let laptop1 = ref('https://ekt-basket-cdn-01.geobasket.ru/vol3920/part392030/392
   position: absolute
 
 .label1
-  margin-left: 94%
+  margin-top: 0.3%
+  margin-left: 90.5%
+  position: absolute
   visibility: hidden
 
 .container1

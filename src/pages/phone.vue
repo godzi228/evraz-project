@@ -74,9 +74,10 @@ let phone = ref('https://ekt-basket-cdn-01.geobasket.ru/vol1710/part171042/17104
   position: absolute
 
 .label1
-  margin-left: 94%
+  margin-top: 0.3%
+  margin-left: 90.5%
+  position: absolute
   visibility: hidden
-
 
 
 .container1
