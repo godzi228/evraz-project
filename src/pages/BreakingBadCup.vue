@@ -49,7 +49,7 @@ let cup = ref('https://ekt-basket-cdn-01.geobasket.ru/vol911/part91192/91192130/
             @click="cartStore.addCartItem({
           image: cup1,
           name: 'Кружка Во все тяжкие',
-          price: 1_370,
+          price: 1370,
         })">Добавить в корзину</q-btn>
         </div>
       </q-card-section>
@@ -66,7 +66,10 @@ let cup = ref('https://ekt-basket-cdn-01.geobasket.ru/vol911/part91192/91192130/
 
 <style scoped lang="sass">
 .label2
-  margin-left: 94%
+  margin-top: 0.3%
+  margin-left: 90.5%
+  position: absolute
+
 .label1
   margin-left: 94%
   visibility: hidden
@@ -77,12 +80,15 @@ let cup = ref('https://ekt-basket-cdn-01.geobasket.ru/vol911/part91192/91192130/
 
 .my-card
   width: 88%
+  height: 100px
   border-radius: 30px
 
 .image
-  margin-top: -1.5%
+  margin-left: 1%
+  margin-top: -0.4%
   width: 5%
   border-radius: 15px
+  position: absolute
 
 .container
   display: flex
@@ -117,24 +123,28 @@ let cup = ref('https://ekt-basket-cdn-01.geobasket.ru/vol911/part91192/91192130/
   margin-top: 2%
 
 .image3
-  margin-left: 82.3%
-  margin-top: -2%
+  margin-left: 82.5%
+  margin-top: 1%
   width: 2%
+  position: absolute
 
 .login
-  margin-left: 87%
-  margin-top: -3%
+  margin-left: 82%
+  margin-top: 3%
   font-weight: bold
+  position: absolute
 
 .image4
-  margin-left: 91.6%
-  margin-top: -6.5%
+  margin-left: 88.5%
+  margin-top: 1%
   width: 2%
+  position: absolute
 
 .basket
-  margin-left: 91%
-  margin-top: -1.3%
+  margin-left: 88%
+  margin-top: 3%
   font-weight: bold
+  position: absolute
 
 .shopinf
   width: 100%

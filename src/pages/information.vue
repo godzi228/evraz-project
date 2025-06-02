@@ -60,7 +60,7 @@ let hasInCart = computed(() => {
           @click="cartStore.addCartItem({
           image: tshirt1,
           name: 'Футболка с Хайзенбергом',
-          price: 1_000,
+          price: 1000,
 
         })">Добавить в корзину</q-btn>
       </q-card-section>
@@ -77,12 +77,17 @@ let hasInCart = computed(() => {
 </template>
 
 <style scoped lang="sass">
+
+
+
+.label2
+  margin-top: 0.3%
+  margin-left: 90.5%
+  position: absolute
+
 .label1
   margin-left: 94%
   visibility: hidden
-
-.label2
-  margin-left: 94%
 
 .container1
   display: flex
@@ -90,32 +95,39 @@ let hasInCart = computed(() => {
 
 .my-card
   width: 88%
+  height: 100px
   border-radius: 30px
 
 .image
-  margin-top: -1.5%
+  margin-left: 1%
+  margin-top: -0.4%
   width: 5%
   border-radius: 15px
-
-.basket
-  margin-left: 91%
-  margin-top: -1.3%
-  font-weight: bold
+  position: absolute
 
 .image3
-  margin-left: 82.3%
-  margin-top: -2%
+  margin-left: 82.5%
+  margin-top: 1%
   width: 2%
+  position: absolute
 
 .login
-  margin-left: 87%
-  margin-top: -3%
+  margin-left: 82%
+  margin-top: 3%
   font-weight: bold
+  position: absolute
 
 .image4
-  margin-left: 91.6%
-  margin-top: -6.5%
+  margin-left: 88.5%
+  margin-top: 1%
   width: 2%
+  position: absolute
+
+.basket
+  margin-left: 88%
+  margin-top: 3%
+  font-weight: bold
+  position: absolute
 
 .shopinf
   width: 100%

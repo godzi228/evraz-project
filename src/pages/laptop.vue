@@ -8,7 +8,7 @@ const UserInfo = useUserStore()
 
 let hasInCart = computed(() => {
   for (let cartItem of cartStore.cartItems) {
-    if (cartItem.name === 'Ноутбук') {
+    if (cartItem.name === 'Ноутбук для работы') {
       return true
     }
   }
@@ -49,8 +49,8 @@ let laptop1 = ref('https://ekt-basket-cdn-01.geobasket.ru/vol3920/part392030/392
 
             @click="cartStore.addCartItem({
           image: laptop1,
-          name: 'Ноутбук',
-          price: 33_289,
+          name: 'Ноутбук для работы',
+          price: 33289,
         })">Добавить в корзину</q-btn>
         </div>
       </q-card-section>
@@ -67,7 +67,10 @@ let laptop1 = ref('https://ekt-basket-cdn-01.geobasket.ru/vol3920/part392030/392
 
 <style scoped lang="sass">
 .label2
-  margin-left: 94%
+  margin-top: 0.3%
+  margin-left: 90.5%
+  position: absolute
+
 .label1
   margin-left: 94%
   visibility: hidden
@@ -78,12 +81,15 @@ let laptop1 = ref('https://ekt-basket-cdn-01.geobasket.ru/vol3920/part392030/392
 
 .my-card
   width: 88%
+  height: 100px
   border-radius: 30px
 
 .image
-  margin-top: -1.5%
+  margin-left: 1%
+  margin-top: -0.4%
   width: 5%
   border-radius: 15px
+  position: absolute
 
 .container
   display: flex
@@ -117,25 +123,33 @@ let laptop1 = ref('https://ekt-basket-cdn-01.geobasket.ru/vol3920/part392030/392
   margin-left: 33.5%
   margin-top: 2%
 
+
+
 .image3
-  margin-left: 82.3%
-  margin-top: -2%
+  margin-left: 82.5%
+  margin-top: 1%
   width: 2%
+  position: absolute
 
 .login
-  margin-left: 87%
-  margin-top: -3%
+  margin-left: 82%
+  margin-top: 3%
   font-weight: bold
+  position: absolute
 
 .image4
-  margin-left: 91.6%
-  margin-top: -6.5%
+  margin-left: 88.5%
+  margin-top: 1%
   width: 2%
+  position: absolute
 
 .basket
-  margin-left: 91%
-  margin-top: -1.3%
+  margin-left: 88%
+  margin-top: 3%
   font-weight: bold
+  position: absolute
+
+
 
 .shopinf
   width: 100%

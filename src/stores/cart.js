@@ -41,7 +41,11 @@ export const useCartStore = defineStore('cart', {
       })
     },
     increaseCartItem(product) {
-      product.quantity += 1
+      if(product.quantity < 5) {
+        product.quantity += 1
+      }
+
+
     },
     decreaseCartItem(product) {
       if(product.quantity > 1) {

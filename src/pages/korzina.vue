@@ -5,6 +5,8 @@ import {useUserStore} from 'src/stores/user.js'
 const UserInfo = useUserStore()
 const cartStore = useCartStore();
 
+
+
 const isOrderConfirmed = ref(false);
 
 function deleteCartItemAll() {
@@ -92,11 +94,12 @@ function confirmOrder() {
                 </div>
                 <button class="plusButton" @click="cartStore.increaseCartItem(cartItem)">
                   <img class='plus'
-                       src="https://avatars.mds.yandex.net/i?id=1fdb23cb557c261e07f43290aa3b6f7224bd50a1-6209931-images-thumbs&n=13">
+                       src="https://avatars.mds.yandex.net/i?id=53c4ccc677361c70dc0ec0a288504f80_l-5233530-images-thumbs&n=13">
                 </button>
                 <div class="price">
-                  {{ cartItem.price }} ₽
+                  {{ new Intl.NumberFormat("ru").format(cartItem.price) }} ₽
                 </div>
+
                 <button class="delet" @click="deleteCartItem(index)">
                   <img class="delet"
                        src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3517303/trash-can-icon-md.png">
@@ -105,10 +108,10 @@ function confirmOrder() {
             </div>
             <div class="container4">
               <div class="Summ">
-                Сумма заказа: {{ cartStore.getTotal }} ₽
+                Сумма заказа: {{ new Intl.NumberFormat("ru").format(cartStore.getTotal)  }} ₽
               </div>
               <div class="Summ">
-                ваш баланс: {{ UserInfo.getUserMoney }} ₽
+                Ваш баланс: {{ new Intl.NumberFormat("ru").format(UserInfo.getUserMoney) }} ₽
               </div>
               <q-btn class="accept" color="black" label="Оформить заказ" @click="confirmOrder"/>
             </div>
@@ -128,6 +131,8 @@ function confirmOrder() {
 </template>
 
 <style scoped lang="sass">
+
+
 .container5
   display: flex
   align-items: center
@@ -148,11 +153,49 @@ function confirmOrder() {
 
 
 .label2
-  margin-left: 94%
+  margin-top: 0.3%
+  margin-left: 90.5%
+  position: absolute
 
 .label1
   margin-left: 94%
   visibility: hidden
+
+.my-card
+  width: 88%
+  height: 100px
+  border-radius: 30px
+
+.image
+  margin-left: 1%
+  margin-top: -0.4%
+  width: 5%
+  border-radius: 15px
+  position: absolute
+
+.image3
+  margin-left: 82.5%
+  margin-top: 1%
+  width: 2%
+  position: absolute
+
+.login
+  margin-left: 82%
+  margin-top: 3%
+  font-weight: bold
+  position: absolute
+
+.image4
+  margin-left: 88.5%
+  margin-top: 1%
+  width: 2%
+  position: absolute
+
+.basket
+  margin-left: 88%
+  margin-top: 3%
+  font-weight: bold
+  position: absolute
 
 .container4
   display: flex
@@ -164,57 +207,76 @@ function confirmOrder() {
 .price
   font-size: 24px
   padding-top: 50px
-  margin-left: 15%
+  margin-left: 45%
+  position: absolute
+
 
 .kolvo
   padding-top: 3%
   font-size: 24px
-  margin-left: 3%
+  margin-left: 9.5%
+  position: absolute
 
 .plusButton
-  width: 2%
+  margin-left: 15%
+  margin-top: 1%
+  width: 2.5%
   border-style: none
   color: white
   background-color: white
-  margin-left: 2%
   cursor: pointer
+  position: absolute
+
 
 .minusButton
+  margin-top: 2%
   width: 2%
   border-style: none
   color: white
   background-color: white
-  margin-left: 20%
+  margin-left: -1%
   cursor: pointer
+  position: absolute
 
 .title
-  padding-left: 40px
+  margin-left: -50%
   margin-top: 3%
   font-size: 24px
+  position: absolute
 
 .card1
   display: flex
   flex-direction: row
+  justify-content: space-around
+
 
 .minus
-  width: 50px
+  display: flex
+  flex-direction: column
+  width: 300%
   border-style: none
   color: white
   background-color: white
 
+
+
 .plus
-  width: 50px
+  display: flex
+  flex-direction: column
+  width: 300%
   border-style: none
   color: white
   background-color: white
 
 .delet
   width: 50px
-  margin-left: 13%
+  margin-top: 2%
+  margin-left: 80%
   border-style: none
   color: white
   background-color: white
   cursor: pointer
+  position: absolute
 
 .shopinf
   width: 100%
@@ -230,47 +292,21 @@ function confirmOrder() {
   display: flex
   justify-content: center
 
-.my-card
-  width: 88%
-  border-radius: 30px
 
-.image
-  margin-top: -1.5%
-  width: 5%
-  border-radius: 15px
-
-.image3
-  margin-left: 82.3%
-  margin-top: -2%
-  width: 2%
-
-.login
-  margin-left: 87%
-  margin-top: -3%
-  font-weight: bold
-
-.image4
-  margin-left: 91.6%
-  margin-top: -6.5%
-  width: 2%
-
-.basket
-  margin-left: 91%
-  margin-top: -1.3%
-  font-weight: bold
 
 .container
   display: flex
   justify-content: center
+
 
 .main-card
   width: 88%
   height: 600px
   margin-top: 4%
   border-radius: 30px
+  overflow: auto
 
 .Summ
-
   font-size: 30px
 
 .accept
@@ -278,31 +314,30 @@ function confirmOrder() {
 
 .image5
   width: 2%
-  margin-top: -60px
+  margin-top: -3.5%
 
 .korzink
-  margin-left: 50px
+  margin-left: 3%
   font-weight: bold
   font-size: 30px
-  margin-top: -60px
+  margin-top: -3.5%
 
 .image6
   width: 2%
-  margin-top: 10px
-  margin-left: 1430px
+  margin-left: 87.5%
 
 .deletAll
-  margin-left: 1470px
+  margin-left: 90%
   font-weight: bold
   font-size: 22px
-  margin-top: -34px
+  margin-top: -2%
 
 .tshirt
-  width: 100px
-  margin-left: 50px
+  width: 6%
+  margin-left: -85%
   border-radius: 20px
+
 
 .container2
   margin-top: 20px
-
 </style>

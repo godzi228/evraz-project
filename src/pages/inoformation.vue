@@ -27,7 +27,7 @@
       path: '/information/laptop',
       image: 'https://ekt-basket-cdn-01.geobasket.ru/vol3920/part392030/392030137/images/c246x328/10.webp',
       price: '33 289',
-      name: 'Ноутбук',
+      name: 'Ноутбук для работы',
     },
     {
       path: '/information/BreakingBadCup',
@@ -49,9 +49,6 @@
           <router-link :to="{ path: '/information/korzina' }"><q-img class="image4" src="https://static.tildacdn.com/tild6137-6234-4630-b935-383532613533/grocery-store.png"></q-img></router-link>
           <div class="login">{{ UserInfo.getUserName }}</div>
           <div class="basket">Корзина</div>
-
-
-
         </q-card-section>
       </q-card>
   </div>
@@ -85,7 +82,10 @@
 
 <style scoped lang="sass">
 .label2
-  margin-left: 94%
+  margin-top: 0.3%
+  margin-left: 90.5%
+  position: absolute
+
 .label1
   margin-left: 94%
   visibility: hidden
@@ -94,14 +94,42 @@
   display: flex
   justify-content: center
 
+
+.image3
+  margin-left: 82.5%
+  margin-top: 1%
+  width: 2%
+  position: absolute
+
+.login
+  margin-left: 82%
+  margin-top: 3%
+  font-weight: bold
+  position: absolute
+
+.image4
+  margin-left: 88.5%
+  margin-top: 1%
+  width: 2%
+  position: absolute
+
+.basket
+  margin-left: 88%
+  margin-top: 3%
+  font-weight: bold
+  position: absolute
+
 .my-card
   width: 88%
+  height: 100px
   border-radius: 30px
 
 .image
-  margin-top: -1.5%
+  margin-left: 1%
+  margin-top: -0.4%
   width: 5%
   border-radius: 15px
+  position: absolute
 
 .container
   display: flex
@@ -134,25 +162,7 @@
   margin-left: 33.5%
   margin-top: 2%
 
-.image3
-  margin-left: 82.3%
-  margin-top: -2%
-  width: 2%
 
-.login
-  margin-left: 87%
-  margin-top: -3%
-  font-weight: bold
-
-.image4
-  margin-left: 91.6%
-  margin-top: -6.5%
-  width: 2%
-
-.basket
-  margin-left: 91%
-  margin-top: -1.3%
-  font-weight: bold
 
 .shopinf
   width: 100%
